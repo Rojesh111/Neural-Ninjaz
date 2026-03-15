@@ -1,0 +1,38 @@
+# Credentials & Keys
+mykey
+.env
+*.pem
+*.key
+
+# Data & Test Samples
+TestSamples/
+media/json/
+media/legal/
+media/personal/
+*.pkl
+*.joblib
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env
+*.log
+
+# Node.js
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store
+
+# OS
+.DS_Store
+Thumbs.db

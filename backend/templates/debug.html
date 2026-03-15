@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Interface - Zero-Trust</title>
+    <style>
+        body {
+            font-family: monospace;
+            background: #000;
+            color: #0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            border-bottom: 2px solid #0f0;
+            padding-bottom: 10px;
+        }
+
+        .log-container {
+            background: #111;
+            border: 1px solid #0f0;
+            height: 400px;
+            overflow-y: scroll;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .log-entry {
+            margin-bottom: 5px;
+            border-bottom: 1px solid #222;
+            padding-bottom: 5px;
+        }
+
+        .timestamp {
+            color: #888;
+        }
+
+        .level-info {
+            color: #0af;
+        }
+
+        .level-security {
+            color: #f00;
+            font-weight: bold;
+        }
+
+        .card {
+            border: 1px solid #0f0;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Zero-Trust Firewall Debugger</h1>
+
+        <div class="card">
+            <h2>Real-time Firewall Logs</h2>
+            <div class="log-container" id="logs">
+                <div class="log-entry">
+                    <span class="timestamp">[21:05:12]</span> <span class="level-info">[SYSTEM]</span> Firewall
+                    initialized. Dual-layer (ML + Gemma) ACTIVE.
+                </div>
+                <div class="log-entry">
+                    <span class="timestamp">[21:05:45]</span> <span class="level-security">[ALERT]</span> Potential
+                    prompt injection detected in stream. Intercepting...
+                </div>
+            </div>
+            <button onclick="location.reload()"
+                style="background: #0f0; color: #000; border: none; padding: 10px; cursor: pointer;">Clear &
+                Refresh</button>
+        </div>
+
+        <div class="card">
+            <h2>Internal State</h2>
+            <p>Active Models: <code>ML-Firewall-v1.2</code>, <code>Gemma-Tiny-7b-q4</code></p>
+            <p>Threat Level: <span style="color: #0f0;">Low</span></p>
+        </div>
+
+        <nav>
+            <a href="/admin" style="color: #0f0;">Back to Admin Panel</a>
+        </nav>
+    </div>
+</body>
+
+</html>

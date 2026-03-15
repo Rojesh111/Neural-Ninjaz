@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+@layer components {
+  .glass {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-move 3s ease infinite;
+  }
+
+  @keyframes gradient-move {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}

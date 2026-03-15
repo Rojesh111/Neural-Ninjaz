@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+motor
+pydantic-settings
+python-multipart
+jinja2
+python-dotenv
+starlette-admin
+odmantic
