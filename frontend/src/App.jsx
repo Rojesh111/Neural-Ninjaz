@@ -615,6 +615,15 @@ function ChatView() {
   const [status, setStatus] = useState('');
   const [isConnected, setIsConnected] = useState(false);
   const wsRef = React.useRef(null);
+  const messagesEndRef = React.useRef(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages, status]);
 
   useEffect(() => {
     fetchBatches();
@@ -796,6 +805,7 @@ function ChatView() {
             </div>
           </div>
         )}
+        <div ref={messagesEndRef} />
       </div>
 
       {/* Input */}
